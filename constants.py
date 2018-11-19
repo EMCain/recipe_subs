@@ -10,7 +10,15 @@ OPINIONS = [
     'I hated it!',
     'My kids refused to eat it.',
     'Horrible!',
-    'Would not reccomend.'
+    'Would not reccomend.',
+    'My husband made me throw it out.',
+    'My dog wouldn\'t even eat it.',
+    'It looks nothing like the pictures.',
+    'didn\'t rise at all!',
+    'overflowed the pan!',
+    'didn\'t brown!',
+    'even the dog wouldn''t eat it!',
+    'ruined my oven!',
 ]
 
 STAR = u'\u2B50'
