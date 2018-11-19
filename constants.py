@@ -17,7 +17,7 @@ OPINIONS = [
     'didn\'t rise at all!',
     'overflowed the pan!',
     'didn\'t brown!',
-    'even the dog wouldn''t eat it!',
+    'even the dog wouldn\t eat it!',
     'ruined my oven!',
 ]
 
