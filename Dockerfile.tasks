@@ -1,0 +1,20 @@
+### BUILD
+
+FROM python:3.8
+
+WORKDIR /var/app
+COPY ./requirements.txt /var/app/requirements.txt
+
+RUN pip3 install -r /var/app/requirements.txt
+
+### RUNTIME
+
+ENV TZ "Etc/UTC"
+ENV PATH /usr/local/bin:$PATH
+
+EXPOSE 8080
+
+COPY . /var/app
+
+STOPSIGNAL SIGINT
+CMD /var/app/tasks-start.sh

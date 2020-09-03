@@ -1,0 +1,16 @@
+version: '3'
+services:
+  tasks:
+    build:
+      context: .
+      dockerfile: Dockerfile.tasks
+
+    command: /var/app/tasks-start.sh --processes 1
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./:/var/app
+    environment:
+      - ORIGIN_DOMAIN=localhost:3000
+  redis:
+    image: "redis:alpine"
