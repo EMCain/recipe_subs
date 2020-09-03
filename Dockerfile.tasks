@@ -11,6 +11,7 @@ RUN pip3 install -r /var/app/requirements.txt
 
 ENV TZ "Etc/UTC"
 ENV PATH /usr/local/bin:$PATH
+ENV       PYTHONPATH        "${PYTHONPATH}:/var/app"
 
 EXPOSE 8080
 
