@@ -1,5 +1,9 @@
 # Recipe Substitutions
 
+I'm using this joke project as a sandbox to test out some ideas around Docker, Redis, and task queuing. Don't submit PRs to it, the issues are for my own reference. 
+
+## generative text 
+
 Helpful recipe reviews from people who changed one thing.
 
 To run:
