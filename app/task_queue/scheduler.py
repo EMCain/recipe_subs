@@ -26,14 +26,17 @@ def start_scheduler(redis_url, redis_password=None, queue_name='job_scheduler_qu
         cron_string="* * * * *",  # once a minute
         func=log_review,
         args=[datetime.now(), choice(['Alice', 'Bob', 'Carol', 'Dave'])],
-        queue_name='basic_queue',
+        queue_name=queue.name,
         repeat=None
     )
     logger.info(f"Added job {job}")
+
+    return scheduler
 
 if __name__ == "__main__":
     print("about to start")
     url = environ.get('REDIS_URL')
     password = environ.get('REDIS_PASSWORD')  # will be None in development
     print("got env vars")
-    start_scheduler(url, password)
+    scheduler = start_scheduler(url, password)
+    scheduler.run()
