@@ -11,6 +11,9 @@ def review():
 
     return '{} {} {}'.format(sub, opinion, stars)
 
+def log_review(date, username):
+    print(f'Review left at {date.strftime("%H:%M:%S")} by {username}: {review()}')
+
 if __name__ == '__main__':
     for i in range(0, 5):
         print(review())

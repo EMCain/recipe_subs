@@ -1,1 +1,3 @@
 ipython==7.13.0
+rq-scheduler==0.10.0
+rq==1.4.0
