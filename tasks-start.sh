@@ -2,6 +2,8 @@
 
 cd /var/app
 
-#python app/task_queue/print_review.py
-python app/task_queue/scheduler.py
+# Since this is running multiple processes, 
+# run the first process in the background so
+# that the second process is launched.
+python app/task_queue/scheduler.py & 
 python app/task_queue/worker.py
