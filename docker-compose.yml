@@ -12,5 +12,6 @@ services:
       - ./:/var/app
     environment:
       - ORIGIN_DOMAIN=localhost:3000
+      - REDIS_URL=redis://redis:6379
   redis:
     image: "redis:alpine"
