@@ -11,7 +11,25 @@ services:
     volumes:
       - ./:/var/app
     environment:
-      - ORIGIN_DOMAIN=localhost:3000
-      - REDIS_URL=redis://redis:6379
+      - ORIGIN_DOMAIN=localhost:2222
+      - REDIS_URL=redis://redis:1111
+    ports:
+      - "2222:2222"
   redis:
     image: "redis:alpine"
+    command: --port 1111
+    ports:
+      - "1111:1111"
+    expose:
+      - "1111"
+
+  web:
+      build:
+        context: .
+        dockerfile: Dockerfile.web
+      stdin_open: true
+      tty: true
+      ports:
+        - "127.0.0.1:3333:5000"
+      volumes:
+        - ./:/var/app
